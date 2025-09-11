@@ -5,3 +5,49 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.titulo-header{
+  font-family: "Jersey 10", sans-serif;
+}
+
+.header {
+  /* No se especifica background-image aquí, JavaScript lo hará */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  /* Transición para un cambio de imagen suave (opcional) */
+  transition: background-image 1s ease-in-out;
+}
+.btn-1 {
+    display: inline-block;
+    padding: 11px 35px;
+    border: 2px solid #eac613;
+    border-radius: 25px;
+    margin-right: 25px;
+    font-size: 17px;
+    color: white;
+    font-family: "Jersey 10", sans-serif;
+}
+
+.btn-1:hover {
+    background-color: #ffb22c;
+    
+
+}
+
+.btn-primary {
+      display: flex;
+      justify-content: center;
+      background-color: #ffb22c;
+      border: 1px solid black;
+      align-items: center;
+
+}
+.card-title {
+      display: flex;
+      justify-content: center;
+}
