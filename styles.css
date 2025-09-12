@@ -8,20 +8,49 @@
 
 .titulo-header{
   font-family: "Jersey 10", sans-serif;
+  color: white
 }
 
 .header {
-  /* No se especifica background-image aquí, JavaScript lo hará */
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 88vh;
-  display: flex;
-  align-items: center;
+  /* Mantenemos tus estilos existentes */
+  position: relative;
+  overflow: hidden;
+  min-height: 40vh;
   padding: 80px 0;
-  /* Transición para un cambio de imagen suave (opcional) */
-  transition: background-image 1s ease-in-out;
+  color: white;
+  
+  /* Nuevas reglas Flexbox para el header */
+  display: flex;
+  flex-direction: column; /* Alinea los hijos verticalmente */
+  justify-content: space-between; /* Distribuye el espacio entre los hijos */
+  align-items: flex-start; /* Alinea el contenido a la izquierda */
 }
+
+.header-content.container {
+  /* Estilo para que el contenido principal se alinee a la izquierda */
+  align-self: flex-start;
+  padding: 0;
+}
+
+.botones-container {
+  /* Mantienes el estilo para los botones en la esquina superior derecha */
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px;
+}
+
+.video-background {
+  /* Propiedades para el video */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .btn-1 {
     display: inline-block;
     padding: 11px 35px;
@@ -39,6 +68,40 @@
 
 }
 
+/*INICIAR SESION*/
+.btn-2 {
+  background-color: #ffb22c; 
+  color: white;           
+  padding: 1px 10px;
+  border-radius: 5px;
+  margin-right: 25px;
+  cursor: pointer;
+  font-weight: bold;          
+  transition: 0.3s;           
+}
+
+.btn-2:hover {
+  background-color: #ffb22c;
+}
+/*INICIAR SESION*/
+
+/*REGISTRAR USUARIO*/
+.btn-3 {
+  background-color: #ffb22c; 
+  color: white;           
+  padding: 1px 20px;
+  border-radius: 5px;
+  margin-right: 25px;
+  cursor: pointer;
+  font-weight: bold;          
+  transition: 0.3s;           
+}
+
+.btn-3:hover {
+  background-color: #ffb22c;
+}
+/*REGISTRAR USUARIO*/
+
 .btn-primary {
       display: flex;
       justify-content: center;
@@ -51,3 +114,57 @@
       display: flex;
       justify-content: center;
 }
+
+.carousel-wrapper {
+  max-width: 600px; 
+  margin-right:100px; /* Empuja el contenedor a la izquierda */
+  margin-left: auto;  /* Agrega un margen de 20px a la izquierda */
+}
+.carousel-slide {
+  margin: 0 auto;
+  position: relative;
+  display: flex; /* Alinea el carrusel y el contenido en una fila */
+  background: #1b2838; /* Color de fondo oscuro */
+  border-radius: 5px;
+  overflow: hidden; /* Oculta el contenido que se salga del contenedor */
+}
+
+.carousel-inner {
+  flex: 1; /* Ocupa el espacio restante */
+}
+.text-content{
+  max-width: 600px; 
+  margin-right:auto; /* Empuja el contenedor a la izquierda */
+  margin-left: 100px;  /* Agrega un margen de 20px a la izquierda */
+}
+.info-content {
+  width: 350px; /* Ancho fijo para el panel de la derecha */
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.screenshots-grid img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Opcional: Ocultar los indicadores por defecto de Bootstrap si no los usas */
+.carousel-indicators {
+  display: none;
+}
+
+.carousel-item {
+  transition: none ease-in-out !important; /* Haz que la transición dure 0.5 segundos */
+}
+
+
