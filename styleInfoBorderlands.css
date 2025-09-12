@@ -1,0 +1,30 @@
+/*IMAGEN DE FONDO*/
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://s1.1zoom.me/big3/226/359710-blackangel.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+/*IMAGEN DE FONDO*/
+
+.main-container {
+  max-width: 1600px;
+  margin: 20px auto;
+  /* lo centra en la página */
+  border-radius: 5px;
+  background-color: rgba(3, 3, 3, 0.493);
+  /* opacidad del 80% */
+  padding: 70px;
+
+}
+
+.imagenbonderlands{
+  max-width: 600px;
+  margin-left: 30px;
+  /* Empuja el contenedor a la izquierda */
+  margin-right: auto;
+  /* Agrega un margen de 20px a la izquierda */
+}

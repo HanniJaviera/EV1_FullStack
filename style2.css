@@ -1,16 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*IMAGEN DE FONDO*/
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
   padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://s1.1zoom.me/big3/226/359710-blackangel.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+/*IMAGEN DE FONDO*/
+
+/*BOTONES*/
+/*INICIAR SESION*/
+.btn-2 {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 1px 10px;
+  border-radius: 5px;
+  margin-right: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  border: 2px solid #000;
+}
+
+.btn-2:hover {
+  background-color: #1a1917;
+  color: #fff;
 }
 
 /*INICIAR SESION*/
+
+/*REGISTRAR USUARIO*/
+.btn-3 {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 1px 20px;
+  border-radius: 5px;
+  margin-right: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  border: 2px solid #000;
+}
+
+.btn-3:hover {
+  background-color: #1a1917;
+  color: #fff;
+}
+
+/*REGISTRAR USUARIO*/
+/*BOTONES*/
+
+/*INICIAR SESION*/
+.inicio-container {
+  max-width: 400px;
+  margin: 80px auto;
+  /* lo centra en la página */
+  background-color: rgba(3, 3, 3, 0.493);
+  /* opacidad del 80% */
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+}
+
 .logo-container {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .logo {
-  width: 120px;   /* ajusta el tamaño del logo */
+  width: 120px;
+  /* ajusta el tamaño del logo */
   height: auto;
 }
 
@@ -18,7 +88,8 @@ body {
   font-size: 24px;
   font-weight: bold;
   margin-top: 10px;
-  color: #333; /* o el color corporativo */
+  color: white;
+  /* o el color corporativo */
 }
 
 h2 {
@@ -41,8 +112,8 @@ input {
 
 button {
   padding: 10px;
-  background: #ffb22c;
-  color: rgb(0, 0, 0);
+  background: #000000;
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -52,10 +123,11 @@ button {
   color: red;
   font-size: 12px;
 }
+
 /*INICIAR SESION*/
 
-/*REGISTRAR USUARIO*/
 
+/*REGISTRAR USUARIO*/
 #registerForm select {
   width: 100%;
   display: inline-block;
@@ -63,4 +135,149 @@ button {
   margin-top: 10px;
 }
 
+.registro-container {
+  max-width: 400px;
+  margin: 80px auto;
+  /* lo centra en la página */
+  background-color: rgba(3, 3, 3, 0.493);
+  /* opacidad del 80% */
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+}
+
 /*REGISTRAR USUARIO*/
+
+
+/*FORMULARIO DE CONTACTO*/
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://s1.1zoom.me/big3/226/359710-blackangel.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Contenedor centrado con fondo solo detrás del formulario */
+.contact-container {
+  max-width: 400px;
+  margin: 80px auto;
+  /* lo centra en la página */
+  background-color: rgba(3, 3, 3, 0.493);
+  /* opacidad del 80% */
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Encabezado con logo */
+.contact-header img.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.contact-header h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: white;
+}
+
+/* Inputs */
+.contact-form label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Botón */
+.btn-enviar {
+  margin-top: 15px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.btn-enviar:hover {
+  background-color: #000000;
+}
+
+/*FORMULARIO DE CONTACTO*/
+
+/*NOTICIAS*/
+.titulo-noticias {
+  text-align: center;
+  margin: 90px auto 30px;
+  max-width: 900px;
+  background: rgba(3, 3, 3, 0.493);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 29px;
+  font-weight: bold;
+  color: white;
+}
+
+.noticia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 900px;
+  background: rgba(3, 3, 3, 0.493);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.noticia-texto {
+  flex: 1;
+  margin-right: 20px;
+  color: white;
+}
+
+.noticia-texto h2 {
+  margin-bottom: 10px;
+}
+
+.noticia-imagen img {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.btn-ver-nt1,
+.btn-ver-nt2 {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 1px solid #333;
+  background: #000000;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-ver-nt1:hover,
+.btn-ver-nt2:hover {
+  background: #000000;
+  color: #fff;
+}
+
+/*NOTICIAS*/

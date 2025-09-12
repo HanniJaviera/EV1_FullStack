@@ -6,30 +6,46 @@
   font-style: normal;
 }
 
-.titulo-header{
-  font-family: "Jersey 10", sans-serif;
-  color: white
+/*IMAGEN DE FONDO*/
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://s1.1zoom.me/big3/226/359710-blackangel.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
 }
 
+/*IMAGEN DE FONDO*/
+
 .header {
-  /* Mantenemos tus estilos existentes */
   position: relative;
   overflow: hidden;
   min-height: 40vh;
   padding: 80px 0;
   color: white;
-  
-  /* Nuevas reglas Flexbox para el header */
+
+  /* Aplica Flexbox para alinear los elementos a la izquierda */
   display: flex;
-  flex-direction: column; /* Alinea los hijos verticalmente */
-  justify-content: space-between; /* Distribuye el espacio entre los hijos */
-  align-items: flex-start; /* Alinea el contenido a la izquierda */
+  flex-direction: column;
+  justify-content: flex-start;
+  /* Alinea los hijos verticalmente en la parte superior */
+  align-items: flex-start;
+  /* Esto es lo que necesitas para alinear todo a la izquierda */
 }
 
 .header-content.container {
-  /* Estilo para que el contenido principal se alinee a la izquierda */
-  align-self: flex-start;
+  /* No necesitas `align-self` si ya alineas el padre. */
   padding: 0;
+  width: 100%;
+  /* Asegúrate de que ocupe todo el ancho. */
+}
+
+.header-link {
+  text-decoration: none;
+  /* Elimina el subrayado del enlace */
+  color: inherit;
+  /* Mantiene el color del texto original */
 }
 
 .botones-container {
@@ -49,96 +65,130 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  opacity: 0.8;
 }
 
 .btn-1 {
-    display: inline-block;
-    padding: 11px 35px;
-    border: 2px solid #eac613;
-    border-radius: 25px;
-    margin-right: 25px;
-    font-size: 17px;
-    color: white;
-    font-family: "Jersey 10", sans-serif;
+  display: inline-block;
+  padding: 11px 35px;
+  border-radius: 5px;
+  margin-right: 25px;
+  font-size: 25px;
+  color: white;
+  margin-right: 200px;
+  align-self: flex-end;
+  font-family: "Jersey 10", sans-serif;
 }
 
 .btn-1:hover {
-    background-color: #ffb22c;
-    
+  background-color: #1a1917;
+
 
 }
 
 /*INICIAR SESION*/
 .btn-2 {
-  background-color: #ffb22c; 
-  color: white;           
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   padding: 1px 10px;
   border-radius: 5px;
   margin-right: 25px;
   cursor: pointer;
-  font-weight: bold;          
-  transition: 0.3s;           
+  font-weight: bold;
+  transition: 0.3s;
+  border: 2px solid #000;
 }
 
 .btn-2:hover {
-  background-color: #ffb22c;
+  background-color: #1a1917;
+  color: #fff;
 }
+
 /*INICIAR SESION*/
 
 /*REGISTRAR USUARIO*/
 .btn-3 {
-  background-color: #ffb22c; 
-  color: white;           
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   padding: 1px 20px;
   border-radius: 5px;
   margin-right: 25px;
   cursor: pointer;
-  font-weight: bold;          
-  transition: 0.3s;           
+  font-weight: bold;
+  transition: 0.3s;
+  border: 2px solid #000;
 }
 
 .btn-3:hover {
-  background-color: #ffb22c;
+  background-color: #1a1917;
+  color: #fff;
 }
+
 /*REGISTRAR USUARIO*/
 
 .btn-primary {
-      display: flex;
-      justify-content: center;
-      background-color: #ffb22c;
-      border: 1px solid black;
-      align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid black;
+  align-items: center;
+  color: black;
 
 }
+
+.btn-primary:hover {
+  background-color: #1a1917;
+  border: white;
+}
+
 .card-title {
-      display: flex;
-      justify-content: center;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
 
 .carousel-wrapper {
-  max-width: 600px; 
-  margin-right:100px; /* Empuja el contenedor a la izquierda */
-  margin-left: auto;  /* Agrega un margen de 20px a la izquierda */
+  max-width: 600px;
+  margin-right: 30px;
+  /* Empuja el contenedor a la izquierda */
+  margin-left: auto;
+  /* Agrega un margen de 20px a la izquierda */
 }
+
 .carousel-slide {
   margin: 0 auto;
   position: relative;
-  display: flex; /* Alinea el carrusel y el contenido en una fila */
-  background: #1b2838; /* Color de fondo oscuro */
+  display: flex;
+  /* Alinea el carrusel y el contenido en una fila */
+  background: #1b2838;
+  /* Color de fondo oscuro */
   border-radius: 5px;
-  overflow: hidden; /* Oculta el contenido que se salga del contenedor */
+  overflow: hidden;
+  /* Oculta el contenido que se salga del contenedor */
 }
 
 .carousel-inner {
-  flex: 1; /* Ocupa el espacio restante */
+  flex: 1;
+  /* Ocupa el espacio restante */
 }
-.text-content{
-  max-width: 600px; 
-  margin-right:auto; /* Empuja el contenedor a la izquierda */
-  margin-left: 100px;  /* Agrega un margen de 20px a la izquierda */
+
+.text-content {
+  max-width: 600px;
+  margin-right: auto;
+  /* Empuja el contenedor a la izquierda */
+  margin-left: 100px;
+  /* Agrega un margen de 20px a la izquierda */
+  margin-top: 100px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
+
 .info-content {
-  width: 350px; /* Ancho fijo para el panel de la derecha */
+  width: 350px;
+  /* Ancho fijo para el panel de la derecha */
   padding: 20px;
   color: white;
   display: flex;
@@ -164,7 +214,70 @@
 }
 
 .carousel-item {
-  transition: none ease-in-out !important; /* Haz que la transición dure 0.5 segundos */
+  transition: none ease-in-out !important;
+  /* Haz que la transición dure 0.5 segundos */
 }
 
+.iconowsp {
+  width: 40px;
+  height: 40px;
 
+}
+
+.iconoig {
+  width: 35px;
+  height: 35px;
+}
+
+.iconox {
+  width: 50px;
+  height: 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  /* Espacio entre los elementos de contacto */
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* Espacio entre los íconos */
+}
+
+/* Opcional: Estilos para el texto */
+.username,
+.phone-number {
+  margin: 0;
+  /* Elimina el margen por defecto de los párrafos */
+  font-size: 14px;
+}
+
+.main-container {
+  max-width: 1600px;
+  margin: 20px auto;
+  /* lo centra en la página */
+  border-radius: 5px;
+  background-color: rgba(3, 3, 3, 0.493);
+  /* opacidad del 80% */
+  padding: 70px;
+
+}
+
+.card {
+  /* Establece un fondo blanco con un 70% de opacidad */
+  background-color: rgba(0, 0, 0, 0.705);
+  border: none;
+  /* Elimina los bordes para un look más limpio */
+}

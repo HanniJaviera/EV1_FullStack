@@ -57,7 +57,7 @@ if (form) {
       document.getElementById("confirmCorreoError").textContent = "Los correos no coinciden.";
       valid = false;
     }
-
+0
     // Validar contraseña
     if (passwordInput.value.length < 4 || passwordInput.value.length > 10) {
       document.getElementById("passwordError").textContent = "La contraseña debe tener entre 4 y 10 caracteres.";

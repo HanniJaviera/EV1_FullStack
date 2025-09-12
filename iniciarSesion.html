@@ -1,0 +1,89 @@
+<!-------------------------INICIAR SESION-------------------------->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style2.css">
+  <script src="script2.js"></script>
+</head>
+
+<body>
+
+  <!---BARRA DE NAVEGACIÓN-->
+  <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand jersey-10-regular" href="index.html">
+        GAME GALERY
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#OFERTAS">OFERTAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#NOSOTROS">NOSOTROS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blogs.html">BLOGS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">CONTACTO</a>
+          </li>
+        </ul>
+      </div>
+      <div class="botones-container">
+        <a href="iniciarSesion.html">
+          <button class="btn-2">Iniciar sesión</button>
+        </a>
+        <a href="registroUsuario.html">
+          <button class="btn-3">Registrar Usuario</button>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!---BARRA DE NAVEGACIÓN-->
+
+  <div class="inicio-container">
+    <div class="logo-container">
+      <img src="https://github.com/HanniJaviera/EV1_FullStack/blob/main/assets/icono2.png?raw=true"
+        alt="Logo de la empresa" class="logo">
+      <h1 class="company-name">Game Gallery</h1>
+    </div>
+
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" maxlength="100" required
+        pattern="^[a-zA-Z0-9._%+-]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$">
+      <div class="error" id="correoError"></div>
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" minlength="4" maxlength="10" required>
+      <div class="error" id="passwordError"></div>
+
+      <button type="submit">Ingresar</button>
+    </form>
+
+    <p style="text-align:center; margin-top:15px;">
+      ¿No tienes cuenta? <a href="index3.html">Registrate aquí</a>
+    </p>
+
+  </div>
+  <script src="script2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
