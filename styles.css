@@ -218,44 +218,6 @@ body {
   /* Haz que la transición dure 0.5 segundos */
 }
 
-.iconowsp {
-  width: 40px;
-  height: 40px;
-
-}
-
-.iconoig {
-  width: 35px;
-  height: 35px;
-}
-
-.iconox {
-  width: 50px;
-  height: 50px;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  /* Espacio entre los elementos de contacto */
-}
-
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  /* Espacio entre los íconos */
-}
-
 /* Opcional: Estilos para el texto */
 .username,
 .phone-number {
@@ -275,9 +237,101 @@ footer {
 
 }
 
+               /* Tarjetas de video juegos */
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Opcional: añade espacio entre las tarjetas en ambas direcciones */
+}
 .card {
   /* Establece un fondo blanco con un 70% de opacidad */
   background-color: rgba(0, 0, 0, 0.705);
   border: none;
   /* Elimina los bordes para un look más limpio */
+  margin: 1px;
+}
+
+.card img {
+    border-top: 10px solid #007bff00; /* Borde superior de la imagen */
+}
+
+   /* Footer */
+.iconowsp {
+  width: 40px;
+  height: 40px;
+
+}
+
+.iconoig {
+  width: 35px;
+  height: 35px;
+}
+
+.iconox {
+  width: 50px;
+  height: 50px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.705);
+    color: white;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el grupo de contacto */
+    gap: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.newsletter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea el contenido a la derecha */
+    gap: 10px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 5px;
+}
+
+.newsletter-form input,
+.newsletter-form button {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.newsletter-form button {
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+}
+
+
+.newsletter-form button:hover {
+  background-color: #1a1917;
+  color: #fff;
 }

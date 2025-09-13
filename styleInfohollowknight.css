@@ -57,14 +57,3 @@ body {
   background-color: #1a1917;
   color: #fff;
 }
-
-.btn-and-price {
-    display: flex;
-    align-items: center; /* Centra el botón y el precio verticalmente */
-    gap: 20px; /* Agrega espacio entre el botón y el precio */
-}
-
-.price {
-    font-size: 1.5rem; /* Ajusta el tamaño de la fuente para que el precio sea visible */
-/* Hace el texto más grueso */
-}
