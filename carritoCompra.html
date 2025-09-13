@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito de Compras</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="styleCarrito.css">
+</head>
+<body>
+
+    <!---BARRA DE NAVEGACIÓN-->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand jersey-10-regular" href="index.html">
+                GAME GALERY
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#OFERTAS">OFERTAS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#NOSOTROS">NOSOTROS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">BLOGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="botones-container">
+                <a href="iniciarSesion.html">
+                    <button class="btn-2">Iniciar sesión</button>
+                </a>
+                <a href="registroUsuario.html">
+                    <button class="btn-3">Registrar Usuario</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!---BARRA DE NAVEGACIÓN-->
+
+  <!--<header>
+    <h2>Site Name</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Productos</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Blogs</a>
+      <a href="#">Contacto</a>
+    </nav>
+    <div class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</div>
+  </header>-->
+
+  <main>
+    <h1>Mi carrito de compras</h1>
+    <div class="cart-container">
+
+      <!-- Lista de productos -->
+      <div class="cart-items">
+        <div class="cart-item">
+          <img src="https://via.placeholder.com/100" alt="Producto 1">
+          <div class="item-info">
+            <h3>Producto #1</h3>
+            <p>Descripción corta del producto</p>
+            <span class="price" data-price="8000">$ 8.000</span>
+          </div>
+          <div class="quantity">
+            <button class="minus">➖</button>
+            <input type="text" value="1" readonly>
+            <button class="plus">➕</button>
+          </div>
+        </div>
+
+        <div class="cart-item">
+          <img src="https://via.placeholder.com/100" alt="Producto 2">
+          <div class="item-info">
+            <h3>Producto #2</h3>
+            <p>Descripción corta del producto</p>
+            <span class="price" data-price="6000">$ 6.000</span>
+          </div>
+          <div class="quantity">
+            <button class="minus">➖</button>
+            <input type="text" value="1" readonly>
+            <button class="plus">➕</button>
+          </div>
+        </div>
+
+        <div class="cart-item">
+          <img src="https://via.placeholder.com/100" alt="Producto 3">
+          <div class="item-info">
+            <h3>Producto #3</h3>
+            <p>Descripción corta del producto</p>
+            <span class="price" data-price="10000">$ 10.000</span>
+          </div>
+          <div class="quantity">
+            <button class="minus">➖</button>
+            <input type="text" value="1" readonly>
+            <button class="plus">➕</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resumen -->
+      <div class="cart-summary">
+        <h3>TOTAL: $<span id="total">0</span></h3>
+        <input type="text" id="cupon" placeholder="Ingrese el cupón de descuento">
+        <button id="aplicar-cupon">APLICAR</button>
+        <button id="pagar">PAGAR</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="scriptCarrito.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

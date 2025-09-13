@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*IMAGEN DE FONDO*/
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://s1.1zoom.me/big3/226/359710-blackangel.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+/*IMAGEN DE FONDO*/
+
+/*BOTONES*/
+/*INICIAR SESION*/
+.btn-2 {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 1px 10px;
+  border-radius: 5px;
+  margin-right: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  border: 2px solid #000;
+}
+
+.btn-2:hover {
+  background-color: #1a1917;
+  color: #fff;
+}
+
+/*INICIAR SESION*/
+
+/*REGISTRAR USUARIO*/
+.btn-3 {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 1px 20px;
+  border-radius: 5px;
+  margin-right: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  border: 2px solid #000;
+}
+
+.btn-3:hover {
+  background-color: #1a1917;
+  color: #fff;
+}
+
+/*REGISTRAR USUARIO*/
+/*BOTONES*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ddd;
+  padding: 10px 20px;
+}
+
+header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.cart-items {
+  width: 65%;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.cart-item img {
+  width: 100px;
+  margin-right: 15px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity button {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.quantity input {
+  width: 40px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.cart-summary {
+  width: 30%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cart-summary button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#pagar {
+  background: green;
+  color: white;
+  font-weight: bold;
+}
