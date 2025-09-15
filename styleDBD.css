@@ -36,7 +36,7 @@ body {
     gap: 30px; /* Agrega espacio entre la imagen y el texto */
 }
 
-.imagenbonderlands {
+.imagenDBD {
     max-width: 600px;
     /* Las propiedades margin-left y margin-right ya no son necesarias
        porque el Flexbox se encargará del espaciado. */

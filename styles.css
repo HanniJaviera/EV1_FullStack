@@ -16,8 +16,22 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/*IMAGEN DE FONDO*/
 
+/*BARRA*/
+.navbar-transparent {
+     background-color: rgba(3, 3, 3, 0.493) !important;
+}
+
+.navbar-white .nav-link,
+.navbar-white .navbar-brand {
+    color: white !important;
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+/* Header */
 .header {
   position: relative;
   overflow: hidden;
@@ -255,6 +269,7 @@ body {
 .card img {
     border-top: 10px solid #007bff00; /* Borde superior de la imagen */
 }
+
 
    /* Footer */
 .iconowsp {
