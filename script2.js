@@ -21,13 +21,28 @@ form.onsubmit = (e) => {
     valid = false;
   }
 
-  if (!valid) e.preventDefault();
-  else {
-    e.preventDefault(); // quítalo si quieres enviar el form
-    alert("Login válido ✅");
-    // window.location.href = "home.html"; // opcional redirección
+ if (!valid) {
+  e.preventDefault();
+} else {
+  e.preventDefault();
+
+  // 1. Obtener los usuarios registrados de localStorage
+  const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+
+  // 2. Buscar si el usuario y la contraseña coinciden con algún registro
+  const userFound = registeredUsers.find(user => 
+    user.correo === correoInput.value && user.password === passwordInput.value
+  );
+
+  if (userFound) {
+    alert("¡Inicio de sesión exitoso! ✅");
+    // Opcional: Redirigir al usuario a una página de inicio
+    window.location.href = "index.html";
+  } else {
+    alert("❌ Correo o contraseña incorrectos.");
+    passwordInput.value = ""; // Limpiar el campo de contraseña
   }
-};
+}
 /*****************************INICIAR SESION*****************************/
 
 /*****************************REGISTRAR USUARIO*****************************/
@@ -70,12 +85,38 @@ if (form) {
       valid = false;
     }
 
-    if (!valid) e.preventDefault();
-    else {
-      e.preventDefault();
-      alert("✅ Registro exitoso");
-      // Aquí podrías guardar los datos con fetch o redirigir
-    }
+   if (!valid) {
+  e.preventDefault();
+} else {
+  e.preventDefault();
+  
+  // 1. Crear un objeto con los datos del usuario
+  const userData = {
+    nombre: document.getElementById("nombre").value,
+    correo: correoInput.value,
+    password: passwordInput.value,
+    telefono: document.getElementById("telefono").value,
+    region: document.getElementById("region").value,
+    comuna: document.getElementById("comuna").value,
   };
+
+  // 2. Obtener usuarios existentes o crear un array vacío
+  const users = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+
+  // 3. Comprobar si el correo ya existe
+  const userExists = users.some(user => user.correo === userData.correo);
+  if (userExists) {
+    alert("❌ Este correo ya está registrado.");
+    return; // Detener la ejecución
+  }
+
+  // 4. Agregar el nuevo usuario al array
+  users.push(userData);
+
+  // 5. Guardar el array actualizado en localStorage
+  localStorage.setItem('registeredUsers', JSON.stringify(users));
+
+  alert("✅ Registro exitoso");
+  window.location.href = "iniciarSesion.html"; // Redirigir a la página de inicio de sesión
 }
 /*****************************REGISTRAR USUARIO*****************************/
