@@ -246,17 +246,16 @@ body {
   border-radius: 5px;
 }
 
-/* Opcional: Ocultar los indicadores por defecto de Bootstrap si no los usas */
+
 .carousel-indicators {
   display: none;
 }
 
 .carousel-item {
   transition: none ease-in-out !important;
-  /* Haz que la transición dure 0.5 segundos */
+  /* la transición dure 0.5 segundos */
 }
 
-/* Opcional: Estilos para el texto */
 .username,
 .phone-number {
   margin: 0;
@@ -279,13 +278,13 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px; /* Opcional: añade espacio entre las tarjetas en ambas direcciones */
+    gap: 20px; /* añade espacio entre las tarjetas en ambas direcciones */
 }
 .card {
   /* Establece un fondo blanco con un 70% de opacidad */
   background-color: rgba(0, 0, 0, 0.705);
   border: none;
-  /* Elimina los bordes para un look más limpio */
+  /* Elimina los bordes */
   margin: 1px;
 }
 
