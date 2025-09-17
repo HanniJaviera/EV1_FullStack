@@ -46,70 +46,76 @@
           </li>
         </ul>
       </div>
-          <div class="botones-container">
+      <div class="botones-container">
         <a href="iniciarSesion.html">
-            <button class="btn-2">Iniciar sesión</button>
+          <button class="btn-2">Iniciar sesión</button>
         </a>
         <a href="registroUsuario.html">
-            <button class="btn-3">Registrar Usuario</button>
+          <button class="btn-3">Registrar Usuario</button>
         </a>
-    </div>
+        <a href="carritoCompra.html">
+          <div class="cart-icon ms-3">
+            🛒 Cart (<span id="cart-count">0</span>)
+          </div>
+        </a>
+      </div>
   </nav>
-  
+
   <!------------------------------BANNER--------------------------->
 
-<a href="infoBorderlands.html" class="header-link">
-  <header class="header">
-    <video autoplay muted loop class="video-background">
-      <source src="/assets/videoheader.webm" type="video/webm">
-      Tu navegador no soporta el video.
-    </video>
-  </header>
-</a>
+  <a href="infoBorderlands.html" class="header-link">
+    <header class="header">
+      <video autoplay muted loop class="video-background">
+        <source src="/assets/videoheader.webm" type="video/webm">
+        Tu navegador no soporta el video.
+      </video>
+    </header>
+  </a>
   <!-------------------carrusel----------------------->
-  
-<div class="main-container">
-  <div class="row">
-    <div class="text-content">
-      <h3>¡Destacados de la semana!</h3>
-      <p>Descubre los juegos más populares y mejor calificados por nuestra comunidad. No te pierdas las últimas novedades en la galería.</p>
-      <a href="#" class="btn-1"> Ver Productos</a>
-    </div>
-    <div class="carousel-wrapper">
-      <div class="carousel slide" id="customCarousel" data-bs-ride="carousel" data-bs-interval="5000">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <a href="infohollowknight.html"> <img src="assets/hollowknight.jpg" class="d-block w-100" alt="Juego 1">
-            </a>
+
+  <div class="main-container">
+    <div class="row">
+      <div class="text-content">
+        <h3>¡Destacados de la semana!</h3>
+        <p>Descubre los juegos más populares y mejor calificados por nuestra comunidad. No te pierdas las últimas
+          novedades en la galería.</p>
+        <a href="#" class="btn-1"> Ver Productos</a>
+      </div>
+      <div class="carousel-wrapper">
+        <div class="carousel slide" id="customCarousel" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="infohollowknight.html"> <img src="assets/hollowknight.jpg" class="d-block w-100" alt="Juego 1">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="index.html">
+                <img src="assets/hellisus.jpg" class="d-block w-100" alt="Juego 2">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="infodungeons.html">
+                <img src="assets/dungeions.jpg" class="d-block w-100" alt="Juego 3">
+              </a>
+            </div>
           </div>
-          <div class="carousel-item">
-            <a href="index.html">
-              <img src="assets/hellisus.jpg" class="d-block w-100" alt="Juego 2">
-            </a>
+          <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="2"></button>
           </div>
-          <div class="carousel-item">
-            <a href="infodungeons.html">
-              <img src="assets/dungeions.jpg" class="d-block w-100" alt="Juego 3">
-            </a>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="2"></button>
         </div>
       </div>
     </div>
   </div>
-</div>
 
   <!------------------------- Tarjetas 1 -------------------------->
 
@@ -153,9 +159,9 @@
     </div>
   </div>
 
-    <!------------------------- Tarjetas 2 -------------------------->
+  <!------------------------- Tarjetas 2 -------------------------->
 
-    <div class="segunda-linea">
+  <div class="segunda-linea">
     <div class="row">
       <div class="card" style="width: 18rem;">
         <img src="assets/hollowknight.jpg" class="d-block w-100" alt="Juego 1">
@@ -195,34 +201,34 @@
     </div>
   </div>
 
-<footer>
+  <footer>
     <div class="footer-left">
-        <div class="payment-icons">
-            <img src="assets/visa.png" alt="Visa">
-            <img src="assets/mastercard.png" alt="Mastercard">
-            <img src="assets/paypal.png" alt="PayPal">
-        </div>
-        <p class="derechos">&copy; 2025 GAME GALLERY. Todos los derechos reservados.</p>
+      <div class="payment-icons">
+        <img src="assets/visa.png" alt="Visa">
+        <img src="assets/mastercard.png" alt="Mastercard">
+        <img src="assets/paypal.png" alt="PayPal">
+      </div>
+      <p class="derechos">&copy; 2025 GAME GALLERY. Todos los derechos reservados.</p>
     </div>
-    
+
     <div class="contact-group">
-        <p class="username">@gamegallery</p>
-        <div class="social-icons">
-            <img src="assets/iconowsp.webp" class="iconowsp" alt="icono WhatsApp">
-            <img src="assets/iconoig.png" class="iconoig" alt="icono Instagram">
-            <img src="assets/iconox.webp" class="iconox" alt="icono X">
-        </div>
-        <p class="phone-number">+56911118888</p>
+      <p class="username">@gamegallery</p>
+      <div class="social-icons">
+        <img src="assets/iconowsp.webp" class="iconowsp" alt="icono WhatsApp">
+        <img src="assets/iconoig.png" class="iconoig" alt="icono Instagram">
+        <img src="assets/iconox.webp" class="iconox" alt="icono X">
+      </div>
+      <p class="phone-number">+56911118888</p>
     </div>
 
     <div class="newsletter-group">
-        <p>Suscríbete a Novedades</p>
-        <div class="newsletter-form">
-            <input type="email" placeholder="Tu correo electrónico">
-            <button type="submit">Suscribir</button>
-        </div>
+      <p>Suscríbete a Novedades</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Tu correo electrónico">
+        <button type="submit">Suscribir</button>
+      </div>
     </div>
-</footer>
+  </footer>
 
   <script src="script.js"></script>
 </body>

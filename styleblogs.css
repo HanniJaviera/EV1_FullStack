@@ -18,6 +18,67 @@ body {
 
 /*IMAGEN DE FONDO*/
 
+/* ===== BOTONES ===== */
+/* Contenedor de los botones */
+.botones-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* INICIAR SESIÓN */
+.btn-2 {
+  background-color: #ffffff;
+  color: #000;
+  padding: 1px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  border: 2px solid #000;
+}
+
+.btn-2:hover {
+  background-color: #1a1917;
+  color: #fff;
+}
+
+/* REGISTRAR USUARIO */
+.btn-3 {
+  background-color: #ffffff;
+  color: #000;
+  padding: 1px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  border: 2px solid #000;
+}
+
+.btn-3:hover {
+  background-color: #1a1917;
+  color: #fff;
+}
+
+/* CARRITO */
+.cart-icon {
+  background-color: #ffffff;
+  color: #000;
+  padding: 5px 12px;
+  border-radius: 5px;
+  border: 2px solid #000;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cart-icon:hover {
+  background-color: #1a1917;
+  color: #fff;
+}
+
 /*NOTICIAS*/
 .titulo-noticias {
   text-align: center;
@@ -68,6 +129,7 @@ body {
   cursor: pointer;
   border-radius: 5px;
   transition: 0.3s;
+  color: white;
 }
 
 .btn-ver-nt1:hover,

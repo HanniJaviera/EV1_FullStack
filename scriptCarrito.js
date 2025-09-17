@@ -1,48 +1,82 @@
-function actualizarTotal() {
-  let total = 0;
-  let count = 0;
-  document.querySelectorAll(".cart-item").forEach(item => {
-    let price = parseInt(item.querySelector(".price").dataset.price);
-    let quantity = parseInt(item.querySelector("input").value);
-    total += price * quantity;
-    count += quantity;
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  const cartItems = document.querySelectorAll('.cart-item');
+  const totalElement = document.getElementById('total');
+  const aplicarCuponBtn = document.getElementById('aplicar-cupon');
+  const pagarBtn = document.getElementById('pagar');
 
-  document.getElementById("total").textContent = total.toLocaleString("es-CL");
-  document.getElementById("cart-count").textContent = count;
-}
+  // Función para actualizar total
+  function actualizarTotal() {
+    let total = 0;
+    cartItems.forEach(item => {
+      const precio = parseFloat(item.querySelector('.cart-price').dataset.price);
+      const cantidad = parseFloat(item.querySelector('.cart-qty').value);
+      total += precio * cantidad;
+    });
+    // Mostrar total en USD con dos decimales
+    totalElement.textContent = total.toLocaleString('en-US', { minimumFractionDigits: 2 });
+  }
 
-// Manejo de botones ➖ y ➕
-document.querySelectorAll(".plus").forEach(btn => {
-  btn.addEventListener("click", () => {
-    let input = btn.previousElementSibling;
-    input.value = parseInt(input.value) + 1;
-    actualizarTotal();
-  });
-});
+  // Botones + y -
+  cartItems.forEach(item => {
+    const btnMinus = item.querySelector('.btn-minus');
+    const btnPlus = item.querySelector('.btn-plus');
+    const btnRemove = item.querySelector('.btn-remove');
+    const qtyInput = item.querySelector('.cart-qty');
 
-document.querySelectorAll(".minus").forEach(btn => {
-  btn.addEventListener("click", () => {
-    let input = btn.nextElementSibling;
-    if (parseInt(input.value) > 1) {
-      input.value = parseInt(input.value) - 1;
+    btnMinus.addEventListener('click', () => {
+      let cantidad = parseFloat(qtyInput.value);
+      if (cantidad > 1) {
+        qtyInput.value = (cantidad - 1).toFixed(2);
+        actualizarTotal();
+      }
+    });
+
+    btnPlus.addEventListener('click', () => {
+      let cantidad = parseFloat(qtyInput.value);
+      qtyInput.value = (cantidad + 1).toFixed(2);
       actualizarTotal();
+    });
+
+    btnRemove.addEventListener('click', () => {
+      item.remove();
+      actualizarTotal();
+    });
+  });
+
+  // Aplicar cupón de descuento
+  aplicarCuponBtn.addEventListener('click', () => {
+    const cuponInput = document.getElementById('cupon');
+    const cupon = cuponInput.value.trim().toUpperCase();
+    let total = 0;
+
+    cartItems.forEach(item => {
+      const precio = parseFloat(item.querySelector('.cart-price').dataset.price);
+      const cantidad = parseFloat(item.querySelector('.cart-qty').value);
+      total += precio * cantidad;
+    });
+
+    if (cupon === 'DESCUENTO10') {
+      total *= 0.9; // 10% de descuento
+      alert('Cupón aplicado: 10% de descuento');
+    } else if (cupon !== '') {
+      alert('Cupón inválido');
+      return;
+    }
+
+    totalElement.textContent = total.toLocaleString('en-US', { minimumFractionDigits: 2 });
+    cuponInput.value = '';
+  });
+
+  // Botón pagar
+  pagarBtn.addEventListener('click', () => {
+    const totalNum = parseFloat(totalElement.textContent.replace(/,/g, ''));
+    if (totalNum === 0) {
+      alert('No hay productos en el carrito');
+    } else {
+      alert(`Total a pagar: USD ${totalElement.textContent}`);
     }
   });
-});
 
-// Cupón de descuento (ejemplo simple)
-document.getElementById("aplicar-cupon").addEventListener("click", () => {
-  let cupon = document.getElementById("cupon").value;
-  let total = parseInt(document.getElementById("total").textContent.replace(/\./g, ""));
-  if (cupon === "DESCUENTO10") {
-    total = total * 0.9; // 10% descuento
-    document.getElementById("total").textContent = total.toLocaleString("es-CL");
-    alert("Cupón aplicado: 10% descuento");
-  } else {
-    alert("Cupón inválido");
-  }
+  // Inicializar total al cargar
+  actualizarTotal();
 });
-
-// Inicializar total
-actualizarTotal();
