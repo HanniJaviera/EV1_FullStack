@@ -15,6 +15,9 @@ body {
     url("https://s1.1zoom.me/big3/226/359710-blackangel.jpg") no-repeat center center fixed;
   background-size: cover;
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 
