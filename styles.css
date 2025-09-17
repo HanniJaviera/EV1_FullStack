@@ -15,6 +15,16 @@ body {
     url("https://s1.1zoom.me/big3/226/359710-blackangel.jpg") no-repeat center center fixed;
   background-size: cover;
   font-family: Arial, sans-serif;
+  
+}
+
+#pagina-nosotros{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://s1.1zoom.me/big3/226/359710-blackangel.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -187,9 +197,10 @@ body {
 }
 
 /*     Carrusel    */
+
 .carousel-wrapper {
   max-width: 600px;
-  margin-right: 30px;
+  margin-right: 40px;
   /* Empuja el contenedor a la izquierda */
   margin-left: auto;
   /* Agrega un margen de 20px a la izquierda */
@@ -228,7 +239,7 @@ body {
 }
 
 .info-content {
-  width: 350px;
+  width: 300px;
   /* Ancho fijo para el panel de la derecha */
   padding: 20px;
   color: white;
@@ -332,6 +343,14 @@ footer {
 .payment-icons {
     display: flex;
     gap: 15px;
+
+}
+
+.payment-icons .visa,
+.payment-icons .master,
+.payment-icons .paypal {
+  width: 40px;
+  height: 40px;
 }
 
 .contact-info {
