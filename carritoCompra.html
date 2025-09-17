@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Carrito de Compras</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="styleCarrito.css">
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body id="pagina-nosotros">
 
-      <!---BARRA DE NAVEGACIÓN-->
+  <!---BARRA DE NAVEGACIÓN-->
   <nav class="navbar navbar-expand-lg navbar-white fixed-top navbar-transparent">
     <div class="container-fluid">
       <a class="navbar-brand jersey-10-regular" href="index.html">
@@ -57,79 +57,86 @@
     </div>
   </nav>
 
-      <main class="container">
-        <h1>Mi carrito de compras</h1>
+  <main class="container">
+    <h1>Mi carrito de compras</h1>
 
-        <!-- Producto 1 -->
-        <div class="cart-item">
-          <img src="https://lootlevelchill.com/wp-content/uploads/2025/04/Hollow-Knight-Silksong.webp" alt="Producto 1"
-            class="cart-img">
-          <div class="cart-info">
-            <h3>Hollow Knight: SilkSong</h3>
-            <p>¡Descubre un vasto reino embrujado en Hollow Knight: Silksong!</p>
-            <span class="cart-price" data-price="14.60">USD 14.60</span>
-          </div>
-          <div class="cart-actions">
-            <button class="btn-minus">➖</button>
-            <input type="text" value="1" readonly class="cart-qty">
-            <button class="btn-plus">➕</button>
-            <button class="btn-remove">🗑</button>
-          </div>
-        </div>
+    <!-- Producto 1 -->
+    <div class="cart-item">
 
-        <!-- Producto 2 -->
-        <div class="cart-item">
-          <img src="assets/doom.avif" alt="Producto 2" class="cart-img">
-          <div class="cart-info">
-            <h3>Doom Eternal</h3>
-            <p>Los ejércitos del infierno han invadido la Tierra.</p>
-            <span class="cart-price" data-price="59.99">USD 59.99</span>
-          </div>
-          <div class="cart-actions">
-            <button class="btn-minus">➖</button>
-            <input type="text" value="1" readonly class="cart-qty">
-            <button class="btn-plus">➕</button>
-            <button class="btn-remove">🗑</button>
-          </div>
-        </div>
-
-        <!-- Producto 3 -->
-        <div class="cart-item">
-          <img src="assets/infobonderlands.avif" alt="Producto 3" class="cart-img">
-          <div class="cart-info">
-            <h3>Borderlands 4</h3>
-            <p>Juega como uno de nuestros cuatro nuevos buscacámaras</p>
-            <span class="cart-price" data-price="59.99">USD 59.99</span>
-          </div>
-          <div class="cart-actions">
-            <button class="btn-minus">➖</button>
-            <input type="text" value="1" readonly class="cart-qty">
-            <button class="btn-plus">➕</button>
-            <button class="btn-remove">🗑</button>
-          </div>
-        </div>
-
-
-        <!-- Resumen (total a la derecha) -->
-        <div class="cart-summary">
-          <h3>TOTAL: $<span id="total">0</span></h3>
-          <input type="text" id="cupon" placeholder="Ingrese el cupón de descuento">
-          <button id="aplicar-cupon">APLICAR</button>
-          <button id="pagar">PAGAR</button>
-        </div>
-        </div>
-      </main>
-
-
- <footer>
-  <div class="footer-left">
-    <div class="payment-icons">
-      <img src="assets/visa.png" alt="Visa" class="visa">
-      <img src="assets/mastercard.png" alt="Mastercard" class="master">
-      <img src="assets/paypal.png" alt="PayPal" class="paypal">
+      <img src="https://lootlevelchill.com/wp-content/uploads/2025/04/Hollow-Knight-Silksong.webp" alt="Producto 1"
+        class="cart-img">
+      <div class="cart-info">
+        <a href="infohollowknight.html">
+          <h3>Hollow Knight: SilkSong</h3>
+        </a>
+        <p>¡Descubre un vasto reino embrujado en Hollow Knight: Silksong!</p>
+        <span class="cart-price" data-price="14.60">USD 14.60</span>
+      </div>
+      <div class="cart-actions">
+        <button class="btn-minus">➖</button>
+        <input type="text" value="1" readonly class="cart-qty">
+        <button class="btn-plus">➕</button>
+        <button class="btn-remove">🗑</button>
+      </div>
     </div>
-    <p class="derechos">&copy; 2025 GAME GALLERY. Todos los derechos reservados.</p>
-  </div>
+
+    <!-- Producto 2 -->
+    <div class="cart-item">
+      <img src="assets/doom.avif" alt="Producto 2" class="cart-img">
+      <div class="cart-info">
+        <a href="infoDoom.html">
+          <h3>Doom Eternal</h3>
+        </a>
+        <p>Los ejércitos del infierno han invadido la Tierra.</p>
+        <span class="cart-price" data-price="59.99">USD 59.99</span>
+      </div>
+      <div class="cart-actions">
+        <button class="btn-minus">➖</button>
+        <input type="text" value="1" readonly class="cart-qty">
+        <button class="btn-plus">➕</button>
+        <button class="btn-remove">🗑</button>
+      </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="cart-item">
+      <img src="assets/infobonderlands.avif" alt="Producto 3" class="cart-img">
+      <div class="cart-info">
+        <a href="infoBorderlands.html">
+          <h3>Borderlands 4</h3>
+        </a>
+        <p>Juega como uno de nuestros cuatro nuevos buscacámaras</p>
+        <span class="cart-price" data-price="66.19">USD 66.19</span>
+      </div>
+      <div class="cart-actions">
+        <button class="btn-minus">➖</button>
+        <input type="text" value="1" readonly class="cart-qty">
+        <button class="btn-plus">➕</button>
+        <button class="btn-remove">🗑</button>
+      </div>
+    </div>
+
+
+    <!-- Resumen (total a la derecha) -->
+    <div class="cart-summary">
+      <h3>TOTAL: $<span id="total">0</span></h3>
+      <input type="text" id="cupon" placeholder="Ingrese el cupón de descuento">
+      <button id="aplicar-cupon">APLICAR</button>
+      <button id="pagar">PAGAR</button>
+    </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <div class="footer-left">
+      <div class="payment-icons">
+        <img src="assets/visa.png" alt="Visa" class="visa">
+        <img src="assets/mastercard.png" alt="Mastercard" class="master">
+        <img src="assets/paypal.png" alt="PayPal" class="paypal">
+      </div>
+      <p class="derechos">&copy; 2025 GAME GALLERY. Todos los derechos reservados.</p>
+    </div>
 
     <div class="contact-group">
       <p class="username">@gamegallery</p>
@@ -150,10 +157,10 @@
     </div>
   </footer>
 
-      <script src="scriptCarrito.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+  <script src="scriptCarrito.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
 
 </body>
