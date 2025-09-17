@@ -118,5 +118,4 @@ if (form) {
 
   alert("✅ Registro exitoso");
   window.location.href = "iniciarSesion.html"; // Redirigir a la página de inicio de sesión
-}
-/*****************************REGISTRAR USUARIO*****************************/
+}/*****************************REGISTRAR USUARIO*****************************/
