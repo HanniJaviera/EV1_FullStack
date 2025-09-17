@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 
 .jersey-10-regular {
@@ -161,12 +162,14 @@ body {
   color: white;
 }
 
+/*     Carrusel    */
 .carousel-wrapper {
   max-width: 600px;
   margin-right: 30px;
   /* Empuja el contenedor a la izquierda */
   margin-left: auto;
   /* Agrega un margen de 20px a la izquierda */
+  position: relative; 
 }
 
 .carousel-slide {
@@ -250,7 +253,6 @@ body {
   padding: 70px;
 
 }
-
                /* Tarjetas de video juegos */
 .row {
     display: flex;
@@ -295,6 +297,7 @@ footer {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.705);
     color: white;
+    margin-top: auto;
 }
 
 .footer-left {
@@ -349,4 +352,49 @@ footer {
 .newsletter-form button:hover {
   background-color: #1a1917;
   color: #fff;
+}
+
+.contenedor_tarjetas {
+  margin-top: 70px;
+}
+
+
+/*  Nosotros */
+.titulo-nosotros {
+  text-align: center;
+  margin: 90px auto 30px;
+  max-width: 900px;
+  background: rgba(3, 3, 3, 0.493);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 29px;
+  font-weight: bold;
+  color: white;
+}
+
+.nosotros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 900px;
+  background: rgba(3, 3, 3, 0.493);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.nosotros-texto {
+  flex: 1;
+  margin-right: 20px;
+  color: white;
+}
+
+.nosotros-texto h2 {
+  margin-bottom: 10px;
+}
+
+.nosotros-imagen img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
 }
