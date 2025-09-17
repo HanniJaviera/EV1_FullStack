@@ -9,7 +9,7 @@
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="styleRegistrarUsuario.css">
   <link rel="stylesheet" href="styles.css">
-  
+
 </head>
 
 <body>
@@ -43,118 +43,121 @@
           </li>
         </ul>
       </div>
-          <div class="botones-container">
+      <div class="botones-container">
         <a href="iniciarSesion.html">
-            <button class="btn-2">Iniciar sesión</button>
+          <button class="btn-2">Iniciar sesión</button>
         </a>
         <a href="registroUsuario.html">
-            <button class="btn-3">Registrar Usuario</button>
+          <button class="btn-3">Registrar Usuario</button>
         </a>
-    </div>
-    </div>
-  </nav>
+        <a href="carritoCompra.html">
+          <div class="cart-icon ms-3">
+            🛒 Cart (<span id="cart-count">0</span>)
+          </div>
+        </a>
+      </div>
 
 
-  <!---BARRA DE NAVEGACIÓN-->
+      <!---BARRA DE NAVEGACIÓN-->
 
-  <div class="registro-container">
-    <div class="logo-container">
-      <img src="https://github.com/HanniJaviera/EV1_FullStack/blob/main/assets/icono2.png?raw=true"
-        alt="Logo de la empresa" class="logo">
-      <h1 class="company-name">Game Gallery</h1>
-    </div>
+      <div class="registro-container">
+        <div class="logo-container">
+          <img src="https://github.com/HanniJaviera/EV1_FullStack/blob/main/assets/icono2.png?raw=true"
+            alt="Logo de la empresa" class="logo">
+          <h1 class="company-name">Game Gallery</h1>
+        </div>
 
 
-    <h2>Registro de usuario</h2>
-    <form id="registerForm">
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" required maxlength="100">
-      <div class="error" id="nombreError"></div>
+        <h2>Registro de usuario</h2>
+        <form id="registerForm">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required maxlength="100">
+          <div class="error" id="nombreError"></div>
 
-      <label for="correo">Correo</label>
-      <input type="email" id="correo" name="correo" maxlength="100" required
-        pattern="^[a-zA-Z0-9._%+-]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$">
-      <div class="error" id="correoError"></div>
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" name="correo" maxlength="100" required
+            pattern="^[a-zA-Z0-9._%+-]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$">
+          <div class="error" id="correoError"></div>
 
-      <label for="confirmCorreo">Confirmar correo</label>
-      <input type="email" id="confirmCorreo" name="confirmCorreo" maxlength="100" required>
-      <div class="error" id="confirmCorreoError"></div>
+          <label for="confirmCorreo">Confirmar correo</label>
+          <input type="email" id="confirmCorreo" name="confirmCorreo" maxlength="100" required>
+          <div class="error" id="confirmCorreoError"></div>
 
-      <label for="password">Contraseña</label>
-      <input type="password" id="password" name="password" minlength="4" maxlength="10" required>
-      <div class="error" id="passwordError"></div>
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" minlength="4" maxlength="10" required>
+          <div class="error" id="passwordError"></div>
 
-      <label for="confirmPassword">Confirmar contraseña</label>
-      <input type="password" id="confirmPassword" name="confirmPassword" minlength="4" maxlength="10" required>
-      <div class="error" id="confirmPasswordError"></div>
+          <label for="confirmPassword">Confirmar contraseña</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" minlength="4" maxlength="10" required>
+          <div class="error" id="confirmPasswordError"></div>
 
-      <label for="telefono">Teléfono (opcional)</label>
-      <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}">
+          <label for="telefono">Teléfono (opcional)</label>
+          <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}">
 
-      <label for="region">Región</label>
-      <select id="region" name="region" required>
-        <option value="">-- Seleccione la región --</option>
-        <option value="RM">Región Metropolitana de Santiago</option>
-        <option value="V">Región de Valparaíso</option>
-        <option value="VIII">Región del Biobío</option>
-        <option value="X">Región de Los Lagos</option>
-        <option value="IX">Región de La Araucanía</option>
-        <option value="VII">Región del Maule</option>
-      </select>
+          <label for="region">Región</label>
+          <select id="region" name="region" required>
+            <option value="">-- Seleccione la región --</option>
+            <option value="RM">Región Metropolitana de Santiago</option>
+            <option value="V">Región de Valparaíso</option>
+            <option value="VIII">Región del Biobío</option>
+            <option value="X">Región de Los Lagos</option>
+            <option value="IX">Región de La Araucanía</option>
+            <option value="VII">Región del Maule</option>
+          </select>
 
-      <label for="comuna">Comuna</label>
-      <select id="comuna" name="comuna" required>
-        <option value="">-- Seleccione la comuna --</option>
-        <!-- Comunas principales por región -->
-        <!-- RM -->
-        <option value="Santiago">Santiago</option>
-        <option value="Las Condes">Las Condes</option>
-        <option value="Providencia">Providencia</option>
-        <option value="Puente Alto">Puente Alto</option>
+          <label for="comuna">Comuna</label>
+          <select id="comuna" name="comuna" required>
+            <option value="">-- Seleccione la comuna --</option>
+            <!-- Comunas principales por región -->
+            <!-- RM -->
+            <option value="Santiago">Santiago</option>
+            <option value="Las Condes">Las Condes</option>
+            <option value="Providencia">Providencia</option>
+            <option value="Puente Alto">Puente Alto</option>
 
-        <!-- Valparaíso -->
-        <option value="Valparaíso">Valparaíso</option>
-        <option value="Viña del Mar">Viña del Mar</option>
-        <option value="Quilpué">Quilpué</option>
-        <option value="Villa Alemana">Villa Alemana</option>
+            <!-- Valparaíso -->
+            <option value="Valparaíso">Valparaíso</option>
+            <option value="Viña del Mar">Viña del Mar</option>
+            <option value="Quilpué">Quilpué</option>
+            <option value="Villa Alemana">Villa Alemana</option>
 
-        <!-- Biobío -->
-        <option value="Concepción">Concepción</option>
-        <option value="Talcahuano">Talcahuano</option>
-        <option value="Chiguayante">Chiguayante</option>
-        <option value="Coronel">Coronel</option>
+            <!-- Biobío -->
+            <option value="Concepción">Concepción</option>
+            <option value="Talcahuano">Talcahuano</option>
+            <option value="Chiguayante">Chiguayante</option>
+            <option value="Coronel">Coronel</option>
 
-        <!-- Los Lagos -->
-        <option value="Puerto Montt">Puerto Montt</option>
-        <option value="Puerto Varas">Puerto Varas</option>
-        <option value="Osorno">Osorno</option>
-        <option value="Castro">Castro</option>
+            <!-- Los Lagos -->
+            <option value="Puerto Montt">Puerto Montt</option>
+            <option value="Puerto Varas">Puerto Varas</option>
+            <option value="Osorno">Osorno</option>
+            <option value="Castro">Castro</option>
 
-        <!-- La Araucanía -->
-        <option value="Temuco">Temuco</option>
-        <option value="Villarrica">Villarrica</option>
-        <option value="Pucón">Pucón</option>
-        <option value="Angol">Angol</option>
+            <!-- La Araucanía -->
+            <option value="Temuco">Temuco</option>
+            <option value="Villarrica">Villarrica</option>
+            <option value="Pucón">Pucón</option>
+            <option value="Angol">Angol</option>
 
-        <!-- Maule -->
-        <option value="Talca">Talca</option>
-        <option value="Curicó">Curicó</option>
-        <option value="Linares">Linares</option>
-        <option value="Constitución">Constitución</option>
-      </select>
+            <!-- Maule -->
+            <option value="Talca">Talca</option>
+            <option value="Curicó">Curicó</option>
+            <option value="Linares">Linares</option>
+            <option value="Constitución">Constitución</option>
+          </select>
 
-      <button type="submit">Registrar</button>
-    </form>
+          <button type="submit">Registrar</button>
+        </form>
 
-    <p style="text-align:center; margin-top:15px;">
-      ¿Ya tienes cuenta? <a href="index2.html">Inicia sesión aquí</a>
-    </p>
+        <p style="text-align:center; margin-top:15px;">
+          ¿Ya tienes cuenta? <a href="index2.html">Inicia sesión aquí</a>
+        </p>
 
-  </div>
-  <script src="script2.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+      </div>
+      <script src="script2.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

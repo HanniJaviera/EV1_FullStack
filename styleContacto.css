@@ -17,14 +17,20 @@ body {
 }
 /*IMAGEN DE FONDO*/
 
-/*BOTONES*/
-/*INICIAR SESION*/
+/* ===== BOTONES ===== */
+/* Contenedor de los botones */
+.botones-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* INICIAR SESIÓN */
 .btn-2 {
   background-color: #ffffff;
-  color: rgb(0, 0, 0);
+  color: #000;
   padding: 1px 10px;
   border-radius: 5px;
-  margin-right: 25px;
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
@@ -36,15 +42,12 @@ body {
   color: #fff;
 }
 
-/*INICIAR SESION*/
-
-/*REGISTRAR USUARIO*/
+/* REGISTRAR USUARIO */
 .btn-3 {
   background-color: #ffffff;
-  color: rgb(0, 0, 0);
+  color: #000;
   padding: 1px 20px;
   border-radius: 5px;
-  margin-right: 25px;
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
@@ -56,8 +59,24 @@ body {
   color: #fff;
 }
 
-/*REGISTRAR USUARIO*/
-/*BOTONES*/
+/* CARRITO */
+.cart-icon {
+  background-color: #ffffff;
+  color: #000;
+  padding: 5px 12px;
+  border-radius: 5px;
+  border: 2px solid #000;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cart-icon:hover {
+  background-color: #1a1917;
+  color: #fff;
+}
 
 /*FORMULARIO DE CONTACTO*/
 body {
