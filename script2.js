@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const passwordInput = document.getElementById("password");
             const confirmPasswordInput = document.getElementById("confirmPassword");
 
-            // Validaciones (mantienen las tuyas)
+            // Validaciones
             const correoRegex = /^[a-zA-Z0-9._%+-]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/;
             if (!correoRegex.test(correoInput.value)) {
                 document.getElementById("correoError").textContent = "Correo inválido. Solo @duoc.cl, @profesor.duoc.cl o @gmail.com";
@@ -55,14 +55,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Muestra la alerta de éxito con los datos y redirige
             const mensaje = `✅ ¡Registro exitoso!
-Nombre: ${userData.nombre}
-Correo: ${userData.correo}`;
+            Nombre: ${userData.nombre}
+            Correo: ${userData.correo}`;
             alert(mensaje);
             window.location.href = "iniciarSesion.html";
         };
     }
 
-    // Lógica para la página de INICIO DE SESIÓN
+
     const loginForm = document.getElementById("loginForm");
     if (loginForm) {
         loginForm.onsubmit = (e) => {
@@ -74,12 +74,12 @@ Correo: ${userData.correo}`;
             let valid = true;
             document.querySelectorAll(".error").forEach(err => err.textContent = "");
 
-            // Validaciones de inicio de sesión (puedes personalizarlas)
+            // Validaciones de inicio de sesión
             if (!correoInput.value || !passwordInput.value) {
                 alert("Por favor, completa todos los campos.");
                 valid = false;
             }
-            // Agrega aquí más validaciones si lo deseas
+
 
             if (!valid) return;
             
