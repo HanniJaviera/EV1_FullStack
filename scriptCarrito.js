@@ -1,62 +1,72 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const cartItems = document.querySelectorAll('.cart-item');
   const totalElement = document.getElementById('total');
   const aplicarCuponBtn = document.getElementById('aplicar-cupon');
   const pagarBtn = document.getElementById('pagar');
 
+  // Función para obtener los cart-items actuales
+  const cartItems = () => document.querySelectorAll('.cart-item');
+
   // Función para actualizar total
   function actualizarTotal() {
     let total = 0;
-    cartItems.forEach(item => {
+    cartItems().forEach(item => {
       const precio = parseFloat(item.querySelector('.cart-price').dataset.price);
       const cantidad = parseFloat(item.querySelector('.cart-qty').value);
       total += precio * cantidad;
     });
-    // Mostrar total en USD con dos decimales
     totalElement.textContent = total.toLocaleString('en-US', { minimumFractionDigits: 2 });
   }
 
-  // Botones + y -
-  cartItems.forEach(item => {
-    const btnMinus = item.querySelector('.btn-minus');
-    const btnPlus = item.querySelector('.btn-plus');
-    const btnRemove = item.querySelector('.btn-remove');
-    const qtyInput = item.querySelector('.cart-qty');
+  // Botones +, - y eliminar
+  function inicializarBotones() {
+    cartItems().forEach(item => {
+      const btnMinus = item.querySelector('.btn-minus');
+      const btnPlus = item.querySelector('.btn-plus');
+      const btnRemove = item.querySelector('.btn-remove');
+      const qtyInput = item.querySelector('.cart-qty');
 
-    btnMinus.addEventListener('click', () => {
-      let cantidad = parseFloat(qtyInput.value);
-      if (cantidad > 1) {
-        qtyInput.value = (cantidad - 1).toFixed(2);
+      btnMinus.onclick = () => {
+        let cantidad = parseFloat(qtyInput.value);
+        if (cantidad > 1) {
+          qtyInput.value = (cantidad - 1).toFixed(2);
+          actualizarTotal();
+        }
+      };
+
+      btnPlus.onclick = () => {
+        let cantidad = parseFloat(qtyInput.value);
+        qtyInput.value = (cantidad + 1).toFixed(2);
         actualizarTotal();
-      }
-    });
+      };
 
-    btnPlus.addEventListener('click', () => {
-      let cantidad = parseFloat(qtyInput.value);
-      qtyInput.value = (cantidad + 1).toFixed(2);
-      actualizarTotal();
-    });
+      btnRemove.onclick = () => {
+        item.remove();
+        actualizarTotal();
 
-    btnRemove.addEventListener('click', () => {
-      item.remove();
-      actualizarTotal();
+        // Actualizar localStorage y contador
+        const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        const nombre = item.querySelector('.cart-info h3').textContent;
+        const nuevoCarrito = carrito.filter(p => p.nombre !== nombre);
+        localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
+        document.getElementById('cart-count').textContent = nuevoCarrito.length;
+      };
     });
-  });
+  }
 
-  // Aplicar cupón de descuento
+  // Aplicar cupón
   aplicarCuponBtn.addEventListener('click', () => {
     const cuponInput = document.getElementById('cupon');
     const cupon = cuponInput.value.trim().toUpperCase();
     let total = 0;
 
-    cartItems.forEach(item => {
+    cartItems().forEach(item => {
       const precio = parseFloat(item.querySelector('.cart-price').dataset.price);
       const cantidad = parseFloat(item.querySelector('.cart-qty').value);
       total += precio * cantidad;
     });
 
     if (cupon === 'DESCUENTO10') {
-      total *= 0.9; // 10% de descuento
+      total *= 0.9;
       alert('Cupón aplicado: 10% de descuento');
     } else if (cupon !== '') {
       alert('Cupón inválido');
@@ -77,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Inicializar total al cargar
+  // Inicializar botones y total
+  inicializarBotones();
   actualizarTotal();
 });
