@@ -417,7 +417,7 @@ footer {
   border-radius: 10px;
   font-size: 29px;
   font-weight: bold;
-  color: white;
+  color: white; 
 }
 
 .nosotros {
@@ -434,15 +434,68 @@ footer {
 .nosotros-texto {
   flex: 1;
   margin-right: 20px;
-  color: white;
+  color: white; 
 }
 
 .nosotros-texto h2 {
   margin-bottom: 10px;
+  font-family: "Jersey 10", sans-serif;
+  font-size: 40px;
 }
 
 .nosotros-imagen img {
   width: 300px;
   height: auto;
   border-radius: 8px;
+}
+
+/* ===== Sección Desarrolladoras ===== */
+.desarrolladoras {
+  text-align: center;
+  margin: 90px auto 30px;
+  max-width: 900px;
+  background: rgba(3, 3, 3, 0.493);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 39px;
+  font-weight: bold;
+  color: white;
+  font-family: "Jersey 10", sans-serif;
+}
+
+.desarrolladoras h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.dev-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  /* espacio entre imágenes */
+}
+
+.dev {
+  flex: 1;
+}
+
+.dev img {
+  width: 260px;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 5%;
+  /* círculo */
+  border: 2px solid #fff;
+  transition: transform 0.3s ease;
+}
+
+.dev img:hover {
+  transform: scale(1.05);
+}
+
+.dev p {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: normal;
 }
